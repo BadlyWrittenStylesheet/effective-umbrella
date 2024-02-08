@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box; /* Chyba nigdy nie zrozumiem dlaczego */
+    /* min-width: 0; */
+    transition: 300ms;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+button,
+input {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+}
