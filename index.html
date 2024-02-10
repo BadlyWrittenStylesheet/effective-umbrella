@@ -6,11 +6,15 @@
     <title>Podcast Stats</title>
     <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css"/> -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/page.css" />
+    <!-- <link rel="stylesheet" href="./css/layout.css"> -->
+    <!-- <link rel="stylesheet" href="./css/page.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
+    
   </head>
   <body>
+
+    <!-- nav>div>img^ul>li*4^div>img -->
+
     <nav id="main">
       <div class="logo">
         <img src="./assets/earbuds.svg" alt="Logo" />
@@ -44,24 +48,102 @@
       </div>
     </nav>
 
-    <header id="main">
-      <div class="search">
-        <!-- <img src="./assets/search.svg" alt="Search icon" /> -->
-        <input type="search" name="search" placeholder="Search" />
-      </div>
-      <div class="options">
-        <div class="notifications nav-icon">
-          <img src="./assets/bell.svg" alt="Notifications" />
-        </div>
-        <div class="account">
-          <div class="menu nav-icon">
-            <img src="./assets/three-dots-vertical.svg" alt="Menu" />
+    <main>
+      <header>
+        <input type="search" name="search" placeholder="Search"/>
+        <div class="access">
+          <div class="notifications"></div>
+          <div class="options">
+            <div class="menu"></div>
+            <div class="profile"></div>
           </div>
-          <div class="profile nav-icon">MN</div>
         </div>
-      </div>
-    </header>
+      </header>
+      <section>
+        <!-- .stats>.downloads>.details>span.change>img^span{Downloads}^.number^.orders>.details>span.change>img^span{Live Orders}^.number  -->
+        <div class="stats">
+          <div class="downloads">
+            <div class="details">
+              <span class="change">
+                <img src="" alt="" />
+              </span>
+              <span>Downloads</span>
+            </div>
+            <div class="number"></div>
+          </div>
+          <div class="orders">
+            <div class="details">
+              <span class="change">
+                <img src="" alt="" />
+              </span>
+              <span>Live Orders</span>
+            </div>
+            <div class="number"></div>
+          </div>
+        </div>
+        <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
+        <div class="episode">
+          <div class="date">Episode for Jun<br>05, 2022</div>
+          <div class="publish-date">Published Sep 16, 2022, by Jerry</div>
+          <a href="#">Check it</a>
+        </div>
+      </section>
+      <section>
+        <!-- .top>h3.title-sm+.graph-wrapper>ul.measure-y+.graph>ul.bars>.bar*5>.block-top+.block-btm+span.bar-title -->
+        <div class="performance">
+          <h3 class="title-sm">Top Performing Podcasts</h3>
+          <div class="graph-wrapper">
+            <ul class="measure-y">
+              <li>200</li>
+              <li>150</li>
+              <li>100</li>
+              <li>50</li>
+              <li>0</li>
+            </ul>
+            <div class="graph">
+              <ul class="bars">
+                <li class="bar">
+                  <div class="block-top"></div>
+                  <div class="block-btm"></div>
+                  <span class="bar-title"></span>
+                </li>
+                <li class="bar">
+                  <div class="block-top"></div>
+                  <div class="block-btm"></div>
+                  <span class="bar-title"></span>
+                </li>
+                <li class="bar">
+                  <div class="block-top"></div>
+                  <div class="block-btm"></div>
+                  <span class="bar-title"></span>
+                </li>
+                <li class="bar">
+                  <div class="block-top"></div>
+                  <div class="block-btm"></div>
+                  <span class="bar-title"></span>
+                </li>
+                <li class="bar">
+                  <div class="block-top"></div>
+                  <div class="block-btm"></div>
+                  <span class="bar-title"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- .people>nav>btn.podcasters{Top Podcasters}+btn.episodes{Top Episodes}^ul>li*3>a[href='#']>img+.info>span*2^span.date -->
+        <div class="people">
+          <nav><button class="podcasters active">Top Podcasters</button><button class="episodes">Top Episodes</button></nav>
+          <ul>
+            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
+            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
+            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
+          </ul>
+        </div>
 
-    <script src=""></script>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
