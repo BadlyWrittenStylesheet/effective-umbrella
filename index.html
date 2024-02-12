@@ -4,58 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Podcast Stats</title>
-    <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css"/> -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <!-- <link rel="stylesheet" href="./css/layout.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/7.0.0/normalize.css "
+    />
+    <!-- <link rel="stylesheet" href="https://github.com/elad2412/the-new-css-reset/blob/main/css/reset.css"> -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- <link rel="stylesheet" href="./css/layout.css" /> -->
     <!-- <link rel="stylesheet" href="./css/page.css" /> -->
-    <link rel="stylesheet" href="./css/style.css" />
-    
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
-
+    <style>
+      .material-symbols-rounded {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
     <!-- nav>div>img^ul>li*4^div>img -->
 
     <nav id="main">
       <div class="logo">
-        <img src="./assets/earbuds.svg" alt="Logo" />
+        <!-- <img src="./assets/earbuds.svg" alt="Logo" /> -->
+        <span class="material-symbols-rounded"> headphones </span>
       </div>
       <div class="items">
         <ul>
           <li>
             <a href="#" class="nav-item"
-              ><img src="./assets/house.svg" alt="Home link"
-            /></a>
+              ><span class="material-symbols-rounded"> home </span></a
+            >
           </li>
           <li>
             <a href="#" class="nav-item"
-              ><img src="./assets/chat-dots.svg" alt="Podcasts link"
-            /></a>
+              ><span class="material-symbols-rounded"> sms </span></a
+            >
           </li>
           <li>
             <a href="#" class="nav-item"
-              ><img src="./assets/bar-chart-line.svg" alt="Stats link"
-            /></a>
+              ><span class="material-symbols-rounded"> bar_chart_4_bars </span></a
+            >
           </li>
           <li>
             <a href="#" class="nav-item"
-              ><img src="./assets/people.svg" alt="Social link"
-            /></a>
+              ><span class="material-symbols-rounded"> groups </span></a
+            >
           </li>
         </ul>
       </div>
       <div class="settings">
-        <img src="./assets/gear.svg" alt="Settings link" />
+        <span class="material-symbols-rounded"> settings </span>
       </div>
     </nav>
 
     <main>
       <header>
-        <input type="search" name="search" placeholder="Search"/>
+        <input type="search" name="search" placeholder="Search" />
         <div class="access">
-          <div class="notifications"></div>
+          <span class="notifications material-symbols-rounded">
+            notifications
+          </span>
           <div class="options">
-            <div class="menu"></div>
-            <div class="profile"></div>
+            <div class="menu material-symbols-rounded">
+              more_vert
+            </div>
+            <div class="profile">
+              MN
+            </div>
           </div>
         </div>
       </header>
@@ -64,26 +82,26 @@
         <div class="stats">
           <div class="downloads">
             <div class="details">
-              <span class="change">
-                <img src="" alt="" />
+              <span class="change material-symbols-rounded">
+                download
               </span>
               <span>Downloads</span>
             </div>
-            <div class="number"></div>
+            <div class="number">188.611</div>
           </div>
           <div class="orders">
             <div class="details">
-              <span class="change">
-                <img src="" alt="" />
+              <span class="change material-symbols-rounded">
+                mic
               </span>
               <span>Live Orders</span>
             </div>
-            <div class="number"></div>
+            <div class="number">188.611</div>
           </div>
         </div>
         <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
         <div class="episode">
-          <div class="date">Episode for Jun<br>05, 2022</div>
+          <div class="date">Episode for Jun<br />05, 2022</div>
           <div class="publish-date">Published Sep 16, 2022, by Jerry</div>
           <a href="#">Check it</a>
         </div>
@@ -133,14 +151,43 @@
         </div>
         <!-- .people>nav>btn.podcasters{Top Podcasters}+btn.episodes{Top Episodes}^ul>li*3>a[href='#']>img+.info>span*2^span.date -->
         <div class="people">
-          <nav><button class="podcasters active">Top Podcasters</button><button class="episodes">Top Episodes</button></nav>
+          <nav>
+            <button class="podcasters active">Top Podcasters</button
+            ><button class="episodes">Top Episodes</button>
+          </nav>
           <ul>
-            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
-            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
-            <li><a href="#"><img src="" alt=""><span class="info"><span></span><span></span></span><span class="date"></span></a></li>
+            <li>
+              <a href="#">
+                <img src="" alt="" />
+                <div class="info">
+                  <span>Earth Tones</span>
+                  <span>Wade Warren</span>
+                </div>
+                <span class="date">2d</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="" alt="" />
+                <div class="info">
+                  <span>Around the World</span>
+                  <span>Guy Hawkins</span>
+                </div>
+                <span class="date">2d</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="" alt="" />
+                <div class="info">
+                  <span>World of Kids</span>
+                  <span>Adam Throne</span>
+                </div>
+                <span class="date">2d</span>
+              </a>
+            </li>
           </ul>
         </div>
-
       </section>
     </main>
 

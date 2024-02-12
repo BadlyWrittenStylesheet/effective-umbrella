@@ -5,78 +5,39 @@
 :root {
     --clr-dark: #111;
     --clr-light: #eee;
-    --size: 5em;
+    --clr-gray: #aaa;
+    --size: 7rem;
+    --bg-clr: #111;
     --bg: radial-gradient(
-    var(--clr-dark) 1%, #0000 5%
+        /* var(--bg-clr) 6%, #0000 7%, */
+        #0000 47%, var(--bg-clr) 47%, var(--bg-clr) 51%, #0000 50%
     );
 
     --ff-1: 'Poppins', sans-serif;
-    --ff-2: 'lato', sans-serif;
-    /* #0000 4%, #000 5%, #0000 6% */
+    --ff-2: 'Lato', sans-serif;
 }
 
 body {
+    display: flex;
+    padding: 1.5rem;
+    align-content: stretch;
     height: 100vh;
 
-    display: grid;
-    grid-template-columns: auto 3fr 5fr 3fr;
-    grid-template-rows: auto 4fr 4fr;
+    /* Background */
+    background-image: var(--bg), var(--bg), linear-gradient(45deg, deeppink, indigo);
+    background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
+    background-size: var(--size) var(--size), var(--size) var(--size), contain;
 }
 
-header#main {
-    width: 100%;
-    grid-column: span 3;
-
-    display: flex;
-
-    outline: 5px dotted limegreen;
-
-    >.search {
-        flex: 9 1;
-    }
-    >.options {
-        outline: 5px dotted cyan;
-        flex: 1 0;
-        width: max-content;
-        display: flex;
-        >.notifications {
-            aspect-ratio: 1;
-            display: grid;
-            place-items: center;
-        }
-        >.account {
-            width: max-content;
-            display: flex;
-            >.menu {
-                flex-grow: 1;
-                width: max-content;
-                aspect-ratio: 1;
-                display: grid;
-                place-items: center;
-            }
-            >.profile {
-                aspect-ratio: 1;
-                max-height: 100%;
-                display: grid;
-                place-items: center;
-            }
-        }
-    }
+body > nav {
+    /* background: red; */
 }
 
-.nav-icon {
-    >img {
-        width: 50%;
-        height: 50%;
-    }
+body > main {
+    flex-grow: 1;
+    /* background: lime; */
 }
 
-.search > input {
-    height: 5vh;
-    width: 100%;
-}
-
-
-nav#main {
-    grid-row: span 3;
+.material-symbols-rounded {
+    color: red;
 }

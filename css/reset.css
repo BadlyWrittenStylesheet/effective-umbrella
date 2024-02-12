@@ -4,8 +4,6 @@ body {
 
 * {
     box-sizing: border-box; /* Chyba nigdy nie zrozumiem dlaczego */
-    /* min-width: 0; */
-    transition: 300ms;
 
 }
 
