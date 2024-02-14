@@ -14,22 +14,15 @@
     />
     <!-- <link rel="stylesheet" href="https://github.com/elad2412/the-new-css-reset/blob/main/css/reset.css"> -->
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- <link rel="stylesheet" href="./css/layout.css" /> -->
+    <link rel="stylesheet" href="./css/layout.css" />
     <!-- <link rel="stylesheet" href="./css/page.css" /> -->
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
-    <style>
-      .material-symbols-rounded {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
-    </style>
-    <!-- nav>div>img^ul>li*4^div>img -->
-
-    <nav id="main">
+    <nav>
       <div class="logo">
         <!-- <img src="./assets/earbuds.svg" alt="Logo" /> -->
-        <span class="material-symbols-rounded"> headphones </span>
+        <a href="#" class="material-symbols-rounded"> headphones </a>
       </div>
       <div class="items">
         <ul>
@@ -45,7 +38,9 @@
           </li>
           <li>
             <a href="#" class="nav-item"
-              ><span class="material-symbols-rounded"> bar_chart_4_bars </span></a
+              ><span class="material-symbols-rounded"
+                >bar_chart_4_bars
+              </span></a
             >
           </li>
           <li>
@@ -56,139 +51,133 @@
         </ul>
       </div>
       <div class="settings">
-        <span class="material-symbols-rounded"> settings </span>
+        <a href="#" class="material-symbols-rounded"> settings </a>
       </div>
     </nav>
 
     <main>
-      <header>
+      <header class="search">
         <input type="search" name="search" placeholder="Search" />
         <div class="access">
           <span class="notifications material-symbols-rounded">
             notifications
           </span>
           <div class="options">
-            <div class="menu material-symbols-rounded">
-              more_vert
-            </div>
-            <div class="profile">
-              MN
-            </div>
+            <div class="menu material-symbols-rounded">more_vert</div>
+            <div class="profile">MN</div>
           </div>
         </div>
       </header>
-      <section>
-        <!-- .stats>.downloads>.details>span.change>img^span{Downloads}^.number^.orders>.details>span.change>img^span{Live Orders}^.number  -->
-        <div class="stats">
-          <div class="downloads">
-            <div class="details">
-              <span class="change material-symbols-rounded">
-                download
-              </span>
-              <span>Downloads</span>
+      <div class="sections">
+        <section>
+          <!-- .stats>.downloads>.details>span.change>img^span{Downloads}^.number^.orders>.details>span.change>img^span{Live Orders}^.number  -->
+          <div class="stats">
+            <div class="downloads">
+              <div class="details">
+                <span class="change material-symbols-rounded"> download </span>
+                <span>Downloads</span>
+              </div>
+              <div class="number">188.611</div>
             </div>
-            <div class="number">188.611</div>
-          </div>
-          <div class="orders">
-            <div class="details">
-              <span class="change material-symbols-rounded">
-                mic
-              </span>
-              <span>Live Orders</span>
+            <div class="orders">
+              <div class="details">
+                <span class="change material-symbols-rounded"> mic </span>
+                <span>Live Orders</span>
+              </div>
+              <div class="number">188.611</div>
             </div>
-            <div class="number">188.611</div>
           </div>
-        </div>
-        <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
-        <div class="episode">
-          <div class="date">Episode for Jun<br />05, 2022</div>
-          <div class="publish-date">Published Sep 16, 2022, by Jerry</div>
-          <a href="#">Check it</a>
-        </div>
-      </section>
-      <section>
-        <!-- .top>h3.title-sm+.graph-wrapper>ul.measure-y+.graph>ul.bars>.bar*5>.block-top+.block-btm+span.bar-title -->
-        <div class="performance">
-          <h3 class="title-sm">Top Performing Podcasts</h3>
-          <div class="graph-wrapper">
-            <ul class="measure-y">
-              <li>200</li>
-              <li>150</li>
-              <li>100</li>
-              <li>50</li>
-              <li>0</li>
-            </ul>
-            <div class="graph">
-              <ul class="bars">
-                <li class="bar">
-                  <div class="block-top"></div>
-                  <div class="block-btm"></div>
-                  <span class="bar-title"></span>
-                </li>
-                <li class="bar">
-                  <div class="block-top"></div>
-                  <div class="block-btm"></div>
-                  <span class="bar-title"></span>
-                </li>
-                <li class="bar">
-                  <div class="block-top"></div>
-                  <div class="block-btm"></div>
-                  <span class="bar-title"></span>
-                </li>
-                <li class="bar">
-                  <div class="block-top"></div>
-                  <div class="block-btm"></div>
-                  <span class="bar-title"></span>
-                </li>
-                <li class="bar">
-                  <div class="block-top"></div>
-                  <div class="block-btm"></div>
-                  <span class="bar-title"></span>
-                </li>
+          <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
+          <div class="episode">
+            <div class="date">Episode for Jun<br />05, 2022</div>
+            <div class="publish-date">Published Sep 16, 2022, by Jerry</div>
+            <a href="#">Check it</a>
+          </div>
+        </section>
+        <section>
+          <!-- .top>h3.title-sm+.graph-wrapper>ul.measure-y+.graph>ul.bars>.bar*5>.block-top+.block-btm+span.bar-title -->
+          <div class="performance">
+            <h3 class="title-sm">Top Performing Podcasts</h3>
+            <div class="graph-wrapper">
+              <ul class="measure-y">
+                <li>200</li>
+                <li>150</li>
+                <li>100</li>
+                <li>50</li>
+                <li>0</li>
               </ul>
+              <div class="graph">
+                <ul class="bars">
+                  <li class="bar">
+                    <div class="block-top"></div>
+                    <div class="block-btm"></div>
+                    <span class="bar-title"></span>
+                  </li>
+                  <li class="bar">
+                    <div class="block-top"></div>
+                    <div class="block-btm"></div>
+                    <span class="bar-title"></span>
+                  </li>
+                  <li class="bar">
+                    <div class="block-top"></div>
+                    <div class="block-btm"></div>
+                    <span class="bar-title"></span>
+                  </li>
+                  <li class="bar">
+                    <div class="block-top"></div>
+                    <div class="block-btm"></div>
+                    <span class="bar-title"></span>
+                  </li>
+                  <li class="bar">
+                    <div class="block-top"></div>
+                    <div class="block-btm"></div>
+                    <span class="bar-title"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- .people>nav>btn.podcasters{Top Podcasters}+btn.episodes{Top Episodes}^ul>li*3>a[href='#']>img+.info>span*2^span.date -->
-        <div class="people">
-          <nav>
-            <button class="podcasters active">Top Podcasters</button
-            ><button class="episodes">Top Episodes</button>
-          </nav>
-          <ul>
-            <li>
-              <a href="#">
-                <img src="" alt="" />
-                <div class="info">
-                  <span>Earth Tones</span>
-                  <span>Wade Warren</span>
-                </div>
-                <span class="date">2d</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="" alt="" />
-                <div class="info">
-                  <span>Around the World</span>
-                  <span>Guy Hawkins</span>
-                </div>
-                <span class="date">2d</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="" alt="" />
-                <div class="info">
-                  <span>World of Kids</span>
-                  <span>Adam Throne</span>
-                </div>
-                <span class="date">2d</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <!-- .people>nav>btn.podcasters{Top Podcasters}+btn.episodes{Top Episodes}^ul>li*3>a[href='#']>img+.info>span*2^span.date -->
+          <div class="people">
+            <nav>
+              <button class="podcasters active">Top Podcasters</button
+              ><button class="episodes">Top Episodes</button>
+            </nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="" alt="" />
+                  <div class="info">
+                    <span>Earth Tones</span>
+                    <span>Wade Warren</span>
+                  </div>
+                  <span class="date">2d</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="" alt="" />
+                  <div class="info">
+                    <span>Around the World</span>
+                    <span>Guy Hawkins</span>
+                  </div>
+                  <span class="date">2d</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="" alt="" />
+                  <div class="info">
+                    <span>World of Kids</span>
+                    <span>Adam Throne</span>
+                  </div>
+                  <span class="date">2d</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script src="./js/script.js"></script>
