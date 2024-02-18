@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Saira&display=swap') */
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap')
 
     /* Background */
     /* background-image: var(--bg), var(--bg), linear-gradient(45deg, deeppink, lime); */
@@ -8,29 +10,48 @@
     /* background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2); */
     /* background-size: var(--size) var(--size), var(--size) var(--size), contain; */
 
+html {
+    /* --x: 1px; */
+}
 
-body {
-
+:root {
     --clr-dark: #111;
     --clr-gray: #aaa;
     --clr-light: #eee;
     --size: 7rem;
     --bg-clr: #222;
-    --bg: radial-gradient(#0000 47%, var(--bg-clr) 47%, var(--bg-clr) 51%, #0000 50%);
+    --bg: radial-gradient(
+        var(--clr-dark) 1%, #0000 5%
+    );
     --ff-1: 'Poppins', sans-serif;
     --ff-2: 'Lato', sans-serif;
 
 
     --gap: 2rem;
+
+    --mesh-gradient: radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, hsla(300,100%,59%,1) 0px, transparent 50%),
+                    radial-gradient(at 48% 63%, hsla(340,100%,76%,1) 0px, transparent 50%),
+                    radial-gradient(at 0% 100%, deeppink 0px, transparent 50%),
+                    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+                    radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
 }
 
 body {
+
+    font-family: var(--ff-1);
     padding: 1.25rem;
     overflow: hidden;
     height: 100vh;
     display: flex;
     gap: var(--gap);
-    background: var(--bg);
+    /* background-color: #fff; */
+    /* background-image: var(--mesh-gradient); */
+    /* background-blend-mode: darken; */
+    /* background: var(--bg), var(--bg);
+    background-size: var(--size) var(--size);
+    background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2); */
 }
 
 body > nav {    
@@ -73,19 +94,302 @@ body > main {
     padding: 1.5rem 0;
     
     > .search {
-        background: lime;
+        /* background: lime; */
+        display: flex;
+        height: 5vh;
+        
+        > input {
+            flex-grow: 1;
+        }
+        > span {
+            display: grid;
+            place-items: center;
+            /* display: inline-block; */
+            aspect-ratio: 1;
+            height: 100%;
+            border-radius: 50%;
+        }
+        > .options {
+            display: flex;
+            background: #0002;
+            padding: .2em;
+            border-radius: 100vh; /* ale ja tego ne lubie */
+            >span, >div {
+                display: grid;
+                place-items: center;
+                aspect-ratio: 1;
+                height: 100%;
+                border-radius: 50%;
+                > img {
+                    height: 30%;
+                }
+            }
+            >div {
+                background: #0002;
+            }
+        }
     }
     > .sections {
         flex-grow: 1;
-        background: cyan;
         
         display: flex;
         flex-direction: column;
         gap: var(--gap);
+    }
+}
 
-        > section {
-            background: linear-gradient(45deg, red, blue);
+
+.sections > section {
+    /* background: linear-gradient(45deg, red, blue); */
+    flex-grow: 1;
+    
+    display: flex;
+    gap: var(--gap);
+    > .stats {
+        /* flex-grow: 1; */
+        /* background: cyan; */
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        /* padding: 1em; */
+        > div {
+            /* box-sizing: border-box; */
+            padding: 0 3rem 0 1rem;
             flex-grow: 1;
+            outline: 3px solid #0002;
+            border-radius: 2em;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            > .details {
+                /* background: lime; */
+                /* flex-grow: 1; */
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                /* justify-content: space-between; */
+                > div {
+                    background: #0001;
+                    border-radius: 50vh;
+                    padding: .5rem;
+                    gap: .5em;
+                    display: flex;
+                    align-items: center;
+                    >.change {
+                        font-weight: bold;
+                    }
+                }
+            }
+            > .number {
+                /* flex-grow: 1; */
+                font-size: 3rem;
+            }
+        }
+    }
+    > .episode {
+        background: url('https://picsum.photos/seed/moge_tu_wpisać_coś_fajnego_lub_smiesznego_ale_nie_mam_pomysłu_przepraszam_ale_jestem_porazka_i_to_sie_chyba_nie_zmieni_pisze_to_i_szukam_fajnego_obrazka_jakiegoś_ale_nie_widze_nic_:)_cześć_adrian_czy_ktokolwiek_inny_kto_na_to_patrzy_js > ts_haha/1600/400');
+        background-size: cover;
+        flex-grow: 4;
+        border-radius: 2rem;
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        >.title-lg {
+            font-weight: bold;
+            /* background-blend-mode: ; */
+            color: #fff;
+            mix-blend-mode: exclusion;
+        }
+        >.subtext {
+            font-size: 1em;
+            text-shadow: .1em .1em #000;
+            /* background: #000;
+            width: max-content;
+            padding: 0.25em;
+            border-radius: .5em;
+            background-blend-mode: difference; */
+            /* mix-blend-mode: difference; */
+        }
+        >a {
+            margin-top: auto;
+            width: max-content;
+            padding: 1em 2em;
+        }
+    } 
+}
+
+.subtext {
+    color: #aaa;
+    font-size: .75em;
+    text-transform: uppercase;
+}
+
+
+.title-lg,
+.title-md,
+.title-sm {
+    /* font-weight: 500; */
+    font-family: 'Saira';
+}
+
+.title-lg {
+    font-size: 2.5rem;
+}
+.title-md {
+    font-size: 1.75rem;
+    /* font-weight: bold; */
+}
+.title-sm {
+    font-size: 1.25rem;
+    /* font-weight: bold; */
+}
+
+.btn-light {
+    background: #eee;
+    /* color: #222; */
+    border-radius: 2em;
+    /* border-radius: 50% 20% / 20% 50%; */
+}
+
+.btn-dark {
+    box-shadow: inset 2.5px 2.5px 5px #0002,
+                inset 5px 5px 5px #fff4,
+                inset -5px -5px 5px #000;
+}
+
+.btn-cool {
+    position: relative;
+    /* border: 5px solid; */
+    /* border-image: linear-gradient(135deg, deeppink, indigo) 1; */
+}
+
+.gray-text {
+    color: #aaa;
+}
+
+
+/* Sect2 */
+
+.performance {
+    flex-grow: 4;
+
+    display: flex;
+    flex-direction: column;
+    >.graph-wrapper {
+        flex-grow: 1;
+        /* background: cyan; */
+
+        display: flex;
+        >.measure-y {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        >.graph {
+            flex-grow: 1;
+            /* background: red; */
+            background: repeating-linear-gradient(
+                /* to bottom,
+                #f0f 100%,
+                #00f 125%,
+                #0f0f 125% */
+            );
+            >ul{
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+                >li {
+
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    /* justify-content: center; */
+                    gap: .5rem;
+                    > .block-top {
+                        opacity: .5;
+                    }
+                    >div {
+                        width: 80%;
+                        flex-grow: 1;
+                        border-radius: 1rem;
+                        /* background: #f0a !important; */
+                        /* outline: 1px solid lime; */
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* :( */
+.graph > ul > li {
+    /* outline: 1px solid; */
+    /* background: lime; */
+    /* min-width: 5%; */
+    /* width: max-content; */
+    width: 7%;
+
+    &:nth-child(1) {
+        height: 95%;
+    }
+    &:nth-child(2) {
+        height: 74%;
+    }
+    &:nth-child(3) {
+        height: 62%;
+    }
+    &:nth-child(4) {
+        height: 54%;
+    }
+    &:nth-child(5) {
+        height: 42%;
+    }
+
+}
+
+.people {
+    /* flex-grow: 1; */
+    > nav {
+        display: flex;
+        gap: 1rem;
+        > button {
+            font-size: .75rem;
+            padding: 1em 2em;
+            border-radius: 2em;
+            color: #aaa;
+            font-weight: 700;
+            &.active {
+                background: #222;
+                color: #eee;
+            }
+        }
+    }
+    > ul {
+        padding: 1rem 0;
+        flex-direction: column;
+        display: flex;
+        a:hover {
+            text-decoration: underline;
+        }
+        > li {
+            flex-grow: 1;
+            padding: .5rem;
+            display: flex;
+            align-items: center;
+            gap: calc(var(--gap) / 2);
+            >.info {
+                display: flex;
+                flex-direction: column;
+            }
+            >.date {
+                /* justify-self: flex-end; */
+                margin-left: auto;
+            }
         }
     }
 }

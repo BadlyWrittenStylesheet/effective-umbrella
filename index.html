@@ -58,40 +58,48 @@
     <main>
       <header class="search">
         <input type="search" name="search" placeholder="Search" />
-        <div class="access">
-          <span class="notifications material-symbols-rounded">
-            notifications
-          </span>
-          <div class="options">
-            <div class="menu material-symbols-rounded">more_vert</div>
-            <div class="profile">MN</div>
+        <!-- <div class="access"> -->
+        <span class="notifications material-symbols-rounded">
+          notifications
+        </span>
+        <div class="options">
+          <span class="menu material-symbols-rounded">more_vert</span>
+          <div class="profile-wrapper">
+            <img src="./assets/profile.svg" alt="" />
           </div>
         </div>
+        <!-- </div> -->
       </header>
       <div class="sections">
         <section>
           <!-- .stats>.downloads>.details>span.change>img^span{Downloads}^.number^.orders>.details>span.change>img^span{Live Orders}^.number  -->
           <div class="stats">
-            <div class="downloads">
+            <div>
               <div class="details">
-                <span class="change material-symbols-rounded"> download </span>
-                <span>Downloads</span>
+                <div>
+                  <span class="change">+16%</span>
+                  <span class="material-symbols-rounded"> download </span>
+                </div>
+                <span class="subtext">Downloads</span>
               </div>
-              <div class="number">188.611</div>
+              <div class="number title-lg">188,611</div>
             </div>
-            <div class="orders">
+            <div>
               <div class="details">
-                <span class="change material-symbols-rounded"> mic </span>
-                <span>Live Orders</span>
+                <div>
+                  <span class="change">+8%</span>
+                  <span class="material-symbols-rounded"> mic </span>
+                </div>
+                <span class="subtext">Live Orders</span>
               </div>
-              <div class="number">188.611</div>
+              <div class="number title-lg">45,740</div>
             </div>
           </div>
           <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
           <div class="episode">
-            <div class="date">Episode for Jun<br />05, 2022</div>
-            <div class="publish-date">Published Sep 16, 2022, by Jerry</div>
-            <a href="#">Check it</a>
+            <div class="date title-lg">Episode for Jun<br />05, 2022</div>
+            <div class="subtext">Published Sep 16, 2022, by Jerry</div>
+            <a class="btn-light btn-lg btn-cool" href="#">Check it</a>
           </div>
         </section>
         <section>
@@ -146,33 +154,42 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="" alt="" />
-                  <div class="info">
-                    <span>Earth Tones</span>
-                    <span>Wade Warren</span>
-                  </div>
-                  <span class="date">2d</span>
+                  <img
+                    src="https://source.boringavatars.com/beam/60/WadeWarren"
+                    alt="aaa"
+                  />
                 </a>
+                  <div class="info">
+                    <a href="#">Earth Tones</a>
+                    <a class="gray-text" href="#">Wade Warren</a>
+                  </div>
+                  <span class="date gray-text ">2d</span>
               </li>
               <li>
                 <a href="#">
-                  <img src="" alt="" />
-                  <div class="info">
-                    <span>Around the World</span>
-                    <span>Guy Hawkins</span>
-                  </div>
-                  <span class="date">2d</span>
+                  <img
+                    src="https://source.boringavatars.com/beam/60/GuyHawkins"
+                    alt=""
+                  />
                 </a>
+                  <div class="info">
+                    <a href="#">Around the World</a>
+                    <a class="gray-text" href="#">Guy Hawkins</a>
+                  </div>
+                  <span class="date gray-text">2d</span>
               </li>
               <li>
                 <a href="#">
-                  <img src="" alt="" />
-                  <div class="info">
-                    <span>World of Kids</span>
-                    <span>Adam Throne</span>
-                  </div>
-                  <span class="date">2d</span>
+                  <img
+                    src="https://source.boringavatars.com/beam/60/AdamThrone"
+                    alt=""
+                  />
                 </a>
+                  <div class="info">
+                    <a href="#">World of Kids</a>
+                    <a class="gray-text" href="#">Adam Throne</a>
+                  </div>
+                  <span class="date gray-text">2d</span>
               </li>
             </ul>
           </div>
