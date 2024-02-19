@@ -1,9 +1,9 @@
 const barColors = [
-    [255, 0, 0],
-    [0, 255, 0],
-    [0, 0, 255],
-    [255, 255, 0],
-    [255, 0, 255]
+    '#7b37bf',
+    '#264a73',
+    '#f048ce',
+    '#f04a29',
+    '#bf9021'
 ]
 
 const barNames = [
@@ -28,8 +28,8 @@ const barTxt = Array.from(document.querySelectorAll('.bar-title'));
 
 for (i = 0; i < barsTop.length; i++) {
     console.log(barsTop[i])
-    barsTop[i].style.background = `rgb(${barColors[i][0]}, ${barColors[i][1]}, ${barColors[i][2]}`
-    barsBtm[i].style.background = `rgb(${barColors[i][0]}, ${barColors[i][1]}, ${barColors[i][2]}`
+    barsTop[i].style.background = barColors[i]
+    barsBtm[i].style.background = barColors[i]
     barTxt[i].innerText = barNames[i]
 }
 
