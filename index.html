@@ -14,9 +14,9 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <!-- <link rel="stylesheet" href="https://github.com/elad2412/the-new-css-reset/blob/main/css/reset.css"> -->
-    <!-- <link rel="stylesheet" href="./css/page.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/page.css" />
   </head>
   <body>
     <nav>
@@ -27,14 +27,10 @@
       <div class="items">
         <ul>
           <li>
-            <a href="#" class="nav-item material-symbols-rounded">
-              home
-            </a>
+            <a aria-current="page" href="#" class="nav-item material-symbols-rounded"> home </a>
           </li>
           <li>
-            <a href="#" class="nav-item material-symbols-rounded">
-              sms
-            </a>
+            <a href="#" class="nav-item material-symbols-rounded"> sms </a>
           </li>
           <li>
             <a href="#" class="nav-item material-symbols-rounded">
@@ -42,9 +38,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-item material-symbols-rounded">
-              groups
-            </a>
+            <a href="#" class="nav-item material-symbols-rounded"> groups </a>
           </li>
         </ul>
       </div>
@@ -68,11 +62,11 @@
         </div>
         <!-- </div> -->
       </header>
-      <div class="sections">
+      <!-- <div class="sections"> -->
         <section>
           <!-- .stats>.downloads>.details>span.change>img^span{Downloads}^.number^.orders>.details>span.change>img^span{Live Orders}^.number  -->
           <div class="stats">
-            <div>
+            <div class="cool-card">
               <div class="details">
                 <div>
                   <span class="change">+16%</span>
@@ -82,7 +76,7 @@
               </div>
               <div class="number title-lg">188,611</div>
             </div>
-            <div>
+            <div class="cool-card">
               <div class="details">
                 <div>
                   <span class="change">+8%</span>
@@ -94,15 +88,15 @@
             </div>
           </div>
           <!-- div.episode>.date{Episode for Jun<br>05, 2022}+.publish-date{Published Sep 16, 2022, by Jerry}+button:submit{Check it} -->
-          <div class="episode">
+          <div class="episode grid-lg cool-card">
             <div class="date title-lg">Episode for Jun<br />05, 2022</div>
             <div class="subtext">Published Sep 16, 2022, by Jerry</div>
             <a class="btn-light btn-lg btn-cool" href="#">Check it</a>
           </div>
-        </section>
-        <section>
+        <!-- </section> -->
+        <!-- <section> -->
           <!-- .top>h3.title-sm+.graph-wrapper>ul.measure-y+.graph>ul.bars>.bar*5>.block-top+.block-btm+span.bar-title -->
-          <div class="performance">
+          <div class="performance grid-lg">
             <h3 class="title-md">Top Performing Podcasts</h3>
             <div class="graph-wrapper">
               <ul class="measure-y">
@@ -150,7 +144,7 @@
               ><button class="episodes">Top Episodes</button>
             </nav>
             <ul>
-              <li>
+              <li class="cool-card">
                 <a href="#">
                   <img
                     src="https://source.boringavatars.com/beam/60/WadeWarren"
@@ -163,7 +157,7 @@
                 </div>
                 <span class="date gray-text">2d</span>
               </li>
-              <li>
+              <li class="cool-card">
                 <a href="#">
                   <img
                     src="https://source.boringavatars.com/beam/60/GuyHawkins"
@@ -176,7 +170,7 @@
                 </div>
                 <span class="date gray-text">2d</span>
               </li>
-              <li>
+              <li class="cool-card">
                 <a href="#">
                   <img
                     src="https://source.boringavatars.com/beam/60/AdamThrone"
@@ -192,7 +186,7 @@
             </ul>
           </div>
         </section>
-      </div>
+      <!-- </div> -->
     </main>
 
     <script src="./js/script.js"></script>

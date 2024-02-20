@@ -1,134 +1,19 @@
-/* @import 'style.css'; */
+@media (max-width: 1300px) {
+    main > section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        > .stats {
 
-/* #0000 9%, #000 10%, #0000 11%, */
-/* #0000 19%, #000 20%, #0000 21%, */
-/* #0000 29%, #000 30%, #0000 31%, */
-/* #0000 39%, #000 40%, #0000 41%, */
-/* #0000 49%, #000 50%, #0000 51%, */
-/* #0000 59%, #000 60%, #0000 61% */
-/* #0000 69%, #000 70%, #0000 71%, */
-/* #0000 79%, #000 80%, #0000 81% */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-
-:root {
-    --clr-dark: #111;
-    --clr-light: #eee;
-    --size: 5em;
-    --bg: radial-gradient(
-    var(--clr-dark) 1%, #0000 5%
-    );
-
-    --ff-1: 'Poppins', sans-serif;
-    --ff-2: 'lato', sans-serif;
-    /* #0000 4%, #000 5%, #0000 6% */
-}
-
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 1rem;
-
-    font-family: var(--ff-1);
-    background-image: var(--bg), var(--bg);
-    /* background-color: var(--clr-light); */
-    /* background-repeat: no-repeat; */
-    background-size: var(--size) var(--size);
-    background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
-    /* background-size: cover; */
-}
-
-header#main {
-    >.search {
-        background: #fff;
-    }
-    >.options {
-        outline: 5px dotted cyan;
-
-        /* flex-grow: 1; */
-        display: flex;
-        >.notifications {
-            aspect-ratio: 1;
-            border-radius: 50%;
-            /* background: var(--clr-light); */
-            display: grid;
-            place-items: center;
-            >img {
-            }
         }
-        >.account {
-            /* background-color: lime; */
-            width: max-content;
-            /* aspect-ratio: 2/1; */
-            /* min-width: 0; */
-            /* width: fit-content; */
-            display: flex;
-            background: var(--clr-light);
-            border-radius: 100vh;
-            /* background: color-mix(in hsl, var(--clr-light), #0002); */
-            /* flex-grow: 1; */
-            >.menu {
-                flex-grow: 1;
-                width: max-content;
-                border-radius: 100vh;
-                aspect-ratio: 1;
-                display: grid;
-                place-items: center;
-            }
-            >.profile {
-                border-radius: 100vh;
-                aspect-ratio: 1;
-                max-height: 100%;
-                display: grid;
-                place-items: center;
-                /* max-width: 50%; */
-            }
+        > .episode {
+            order: -2137;
+        }
+        > .performance {
+            order: 2137;
+
+        }
+        > .people {
+
         }
     }
-}
-
-.nav-icon {
-    /* outline: 1px solid #0001; */
-    /* background-color: lime; */
-    &:hover {
-        /* background-color: #0001; */
-        border: none;
-    }
-    >img {
-        width: 50%;
-        height: 50%;
-    }
-}
-
-.search > input {
-    --_icon-size: calc(.5rem + 1%);
-
-    background-image: url("../assets/search.svg");
-    background-repeat: no-repeat;
-    background-size: var(--_icon-size) 100%;
-    background-position: calc(var(--_icon-size) / 2) 0;
-
-    padding-left: calc(var(--_icon-size) * 2);
-    border-radius: 1em;
-    height: 5vh;
-    width: 100%;
-    box-shadow: 1px 2px 5px #0008;
-    
-    border: none;
-
-    transition: 300ms;
-    &:focus {
-        outline: none;
-        box-shadow: 2px 5px 15px #0008;
-        
-    }
-}
-
-
-nav#main {
-    grid-row: span 3;
-    background-color: red;
 }
