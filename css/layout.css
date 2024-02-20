@@ -310,6 +310,24 @@ main {
         }
         >.graph {
             flex-grow: 1;
+            position: relative;
+            >.lines {
+                /* margin-top: 1%; */
+                /* margin-top: 0.5rem; */
+                inset: 0;
+                position: absolute;
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-evenly;
+                >hr{  
+                    border: none;
+                    outline: 1px dashed #0004;
+                    /* height: 10%; */
+                    /* position: absolute; */
+                    width: 95%;
+                    /* inset: 0; */
+                }
+            }
             /* background: red; */
             /* background: repeating-linear-gradient(
                 to bottom,
