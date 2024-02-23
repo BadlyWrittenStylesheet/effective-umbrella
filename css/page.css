@@ -1,4 +1,7 @@
 @media (max-width: 1300px) {
+    :root {
+        --gap: 1.5rem;
+    }
     main > section {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -14,6 +17,12 @@
         }
         > .people {
 
+        }
+    }
+    .performance > div > div > ul {
+        justify-content: space-around;
+        > li > div {
+            max-width: 100%;
         }
     }
 }
