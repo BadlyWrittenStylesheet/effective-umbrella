@@ -2,6 +2,48 @@
     :root {
         --gap: 1.5rem;
     }
+    body {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        /* justify-content: space-between; */
+        /* background: red; */
+        >nav, >nav > ul {
+            width: 100%;
+            flex-direction: row;
+        }
+        > nav {
+            overflow: hidden;
+            height: fit-content;
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            > div:first-of-type {
+                padding: calc(var(--gap) / 2);
+            }
+            > div:last-of-type {
+                padding: calc(var(--gap) / 2);
+            }
+            ul {
+                /* width: fit-content; */
+                /* gap: calc(var(--gap) * 1.5); */
+                /* flex-grow: 0; */
+                li {
+                    width: max-content;
+                    flex-grow: 0;
+                }
+                a {
+                    padding: var(--gap);
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     main > section {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -20,9 +62,65 @@
         }
     }
     .performance > div > div > ul {
-        justify-content: space-around;
+        justify-content: space-between;
         > li > div {
             max-width: 100%;
         }
     }
+
+    .stats > div {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--gap);
+        > * {
+            display: grid;
+            place-items: center;
+
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    body > main > section{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        .grid-lg {
+            grid-column: span 1;
+        }
+    }
+
+    .performance > .graph-wrapper {
+        /* display: flex; */
+        flex-direction: column;
+        >.measure-y {
+            display: flex;
+            flex-direction: row;
+        }
+        > .graph {
+            > .lines {
+                flex-direction: row;
+            }
+            > .bars {
+                flex-direction: column;
+                padding: 0;
+                /* width: 100%; */
+                > .bar {
+                    width: 100%;
+                    flex-direction: row-reverse;
+                    > div {
+                        /* flex-grow: 1; */
+                        height: clamp(20px, 80%, 50px);
+                        width: var(--_size);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* nie ja juz nie daje rady, chory jestem jest 22:00 aaaaah nie dotkne juz swojego telefonu wiecej głupi overflow wszedzie */
+    /* jakby no naprawde dostaje layout na desktopie a na mobileu juz nie, no naprade bruh */
 }
