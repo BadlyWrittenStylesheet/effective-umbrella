@@ -47,17 +47,11 @@
     main > section {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        > .stats {
-
-        }
         > .episode {
             order: -2137;
         }
         > .performance {
             order: 2137;
-
-        }
-        > .people {
 
         }
     }
@@ -75,7 +69,6 @@
         > * {
             display: grid;
             place-items: center;
-
         }
     }
     
@@ -83,6 +76,10 @@
 
 
 @media screen and (max-width: 768px) {
+    :root {
+        --gap: .5rem;
+        font-size: 90%;
+    }
     body > main > section{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -91,8 +88,39 @@
         }
     }
 
-    .performance > .graph-wrapper {
-        /* display: flex; */
+    body main .episode {
+        padding: 1rem;
+        padding-right: 0;
+        gap: 0;
+        width: 100%;
+        min-width: max-content;
+    }
+
+    .performance {
+        display: none;
+    }
+    body {
+        gap: 0;
+    }
+    body > nav {
+        font-size: .8rem;
+        ul {
+            gap: 0;
+
+        }
+        li a {
+            padding: .5em;
+            padding: 0;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            /* padding-inline: .5em; */
+        }
+    }
+    /* .performance > .graph-wrapper {
         flex-direction: column;
         >.measure-y {
             display: flex;
@@ -105,19 +133,17 @@
             > .bars {
                 flex-direction: column;
                 padding: 0;
-                /* width: 100%; */
                 > .bar {
                     width: 100%;
                     flex-direction: row-reverse;
                     > div {
-                        /* flex-grow: 1; */
                         height: clamp(20px, 80%, 50px);
                         width: var(--_size);
                     }
                 }
             }
         }
-    }
+    } */
 }
 
 @media screen and (max-width: 576px) {
